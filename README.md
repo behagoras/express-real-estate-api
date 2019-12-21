@@ -38,10 +38,10 @@ DEBUG=app:* node scripts/mongo/seedApiKeys.js
 
 This bash script creates the api keys needed to authenticate the client and use the passport strategies.
 
-### Seed songs
+### Seed properties
 
 ```bash
-DEBUG=app:* node scripts/mongo/seedSongs.js
+DEBUG=app:* node scripts/mongo/seedProperties.js
 ```
 
 This bash script creates all the needed songs
