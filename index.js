@@ -7,6 +7,7 @@ const { config } = require('./config/index');
 const authApi = require('./routes/auth');
 const moviesApi = require('./routes/movies.js');
 const userMoviesApi = require('./routes/userMovies.js');
+const propertiesApi = require('./routes/properties');
 
 const {
   logErrors,
@@ -24,6 +25,7 @@ app.use(helmet());
 authApi(app);
 moviesApi(app);
 userMoviesApi(app);
+propertiesApi(app);
 
 // Catch 404
 app.use(notFoundHandler);
