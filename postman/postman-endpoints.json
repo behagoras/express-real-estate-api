@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "7022cbc4-e0c6-4f8b-a441-5563c6b63cc0",
+		"name": "TrueHome",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SIGN IN (public-credentials)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4e0c9de0-52fc-4984-b05c-f176d8ce6064",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\",jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "guillermo@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"apiKeyToken\":\"{{admin_api_key_token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/sign-in",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGN IN (admin-credentials)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4e0c9de0-52fc-4984-b05c-f176d8ce6064",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\",jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "root@undefined.sh",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"apiKeyToken\":\"{{admin_api_key_token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/sign-in",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGN UP (client)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4e0c9de0-52fc-4984-b05c-f176d8ce6064",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"David Behar\",\n\t\"email\":\"william@gmail.com\",\n\t\"password\":\"secret\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{client_url}}/auth/sign-up",
+					"host": [
+						"{{client_url}}"
+					],
+					"path": [
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGN UP (api)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Guillermo\",\n\t\"email\":\"guillermo@gmail.com\",\n\t\"password\":\"secret\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/sign-up",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PROPERTIES",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dcb9c8f1-2164-4f03-8a8b-9051ad5abd62",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"property_id\",jsonData.data[0]._id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"year\": \"2019\",\n  \"berry\": \"https://pokeapi.co/api/v2/berry/\",\n  \"berry-firmness\": \"https://pokeapi.co/api/v2/berry-firmness/\",\n  \"berry-flavor\": \"https://pokeapi.co/api/v2/berry-flavor/\",\n  \"characteristic\": \"https://pokeapi.co/api/v2/characteristic/\",\n  \"contest-effect\": \"https://pokeapi.co/api/v2/contest-effect/\",\n  \"contest-type\": \"https://pokeapi.co/api/v2/contest-type/\",\n  \"egg-group\": \"https://pokeapi.co/api/v2/egg-group/\",\n  \"encounter-condition\": \"https://pokeapi.co/api/v2/encounter-condition/\",\n  \"encounter-condition-value\": \"https://pokeapi.co/api/v2/encounter-condition-value/\",\n  \"encounter-method\": \"https://pokeapi.co/api/v2/encounter-method/\",\n  \"evolution-chain\": \"https://pokeapi.co/api/v2/evolution-chain/\",\n  \"evolution-trigger\": \"https://pokeapi.co/api/v2/evolution-trigger/\",\n  \"gender\": \"https://pokeapi.co/api/v2/gender/\",\n  \"generation\": \"https://pokeapi.co/api/v2/generation/\",\n  \"growth-rate\": \"https://pokeapi.co/api/v2/growth-rate/\",\n  \"item\": \"https://pokeapi.co/api/v2/item/\",\n  \"item-attribute\": \"https://pokeapi.co/api/v2/item-attribute/\",\n  \"item-category\": \"https://pokeapi.co/api/v2/item-category/\",\n  \"item-fling-effect\": \"https://pokeapi.co/api/v2/item-fling-effect/\",\n  \"item-pocket\": \"https://pokeapi.co/api/v2/item-pocket/\",\n  \"language\": \"https://pokeapi.co/api/v2/language/\",\n  \"location\": \"https://pokeapi.co/api/v2/location/\",\n  \"location-area\": \"https://pokeapi.co/api/v2/location-area/\",\n  \"machine\": \"https://pokeapi.co/api/v2/machine/\",\n  \"move\": \"https://pokeapi.co/api/v2/move/\",\n  \"move-ailment\": \"https://pokeapi.co/api/v2/move-ailment/\",\n  \"move-battle-style\": \"https://pokeapi.co/api/v2/move-battle-style/\",\n  \"move-category\": \"https://pokeapi.co/api/v2/move-category/\",\n  \"move-damage-class\": \"https://pokeapi.co/api/v2/move-damage-class/\",\n  \"move-learn-method\": \"https://pokeapi.co/api/v2/move-learn-method/\",\n  \"move-target\": \"https://pokeapi.co/api/v2/move-target/\",\n  \"nature\": \"https://pokeapi.co/api/v2/nature/\",\n  \"pal-park-area\": \"https://pokeapi.co/api/v2/pal-park-area/\",\n  \"pokeathlon-stat\": \"https://pokeapi.co/api/v2/pokeathlon-stat/\",\n  \"pokedex\": \"https://pokeapi.co/api/v2/pokedex/\",\n  \"pokemon\": \"https://pokeapi.co/api/v2/pokemon/\",\n  \"pokemon-color\": \"https://pokeapi.co/api/v2/pokemon-color/\",\n  \"pokemon-form\": \"https://pokeapi.co/api/v2/pokemon-form/\",\n  \"pokemon-habitat\": \"https://pokeapi.co/api/v2/pokemon-habitat/\",\n  \"pokemon-shape\": \"https://pokeapi.co/api/v2/pokemon-shape/\",\n  \"pokemon-species\": \"https://pokeapi.co/api/v2/pokemon-species/\",\n  \"region\": \"https://pokeapi.co/api/v2/region/\",\n  \"stat\": \"https://pokeapi.co/api/v2/stat/\",\n  \"super-contest-effect\": \"https://pokeapi.co/api/v2/super-contest-effect/\",\n  \"type\": \"https://pokeapi.co/api/v2/type/\",\n  \"version\": \"https://pokeapi.co/api/v2/version/\",\n  \"version-group\": \"https://pokeapi.co/api/v2/version-group/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/properties",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET FIRST PROPERTY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/properties/{{property_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties",
+						"{{property_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT FIRST PROPERTY PRICE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"prices\": {\n      \"amount\":\"123456\",\n      \"formattedAmount\":\"123,456\",\n      \"currency\": \"USD\"\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/properties/{{property_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties",
+						"{{property_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE PROPERTY",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Borgo Frassino\",\n    \"description\": \"A sólo 25min de Santa Fe y 20 min de Interlomas, Borgo Frassino es un condominio residencial único con 16 casas y 10 departamentos tipo Loft. El conjunto esta situado dentro del exclusivo fraccionamiento Residencial Lomas Verdes, en la 6a Sección de Lomas Verdes. Inspirado en pequeños pueblos que nacieron en la edad media en Italia la exclusividad, belleza y seguridad de el conjunto se desarrolla en 16 casas y 10 departamentos estilo Loft. Con doble acceso de seguridad las 24 horas, zona de amenidades espaciosa, estacionamientos amplios y más de 10 hectáreas de parque a pocos minutos caminando, Borgo Frassino es un condominio excepcional. Cada hogar está desarrollado en los mínimos particulares, usando acabados de primera, como cocinas Teka, y prefiriendo materiales naturales, como la cantera y mármol, para que cada hogar sea único en su desarrollo de espacios, que están pensados para adaptarse a todas las etapas de tu vida. Ven a visitar la Casa Muestra para que puedas ver con tus propios ojos esta oportunidad única de inversión para ti y tu familia. <br><br>El condominio cuenta con amplias casas de cuatro recámaras con cuatro y medio baños que se distribuyen en tres o cuatro pisos e que incluyen dos terrazas y patio con cuarto de servicio. Los departamentos son tipo loft y se dividen en dos pisos y cuentan con tres recámaras y tres y medio baños con cuarto de servicio y la opción te tener una terraza muy espaciosa. <br><br>Borgo Frassino cuenta con los siguientes servicios: <br><br>· Doble seguridad con dos puertas de acceso vigiladas <br>· Acabos de lujo, como cocinas de granito con equipo Teka y baños con acabados en marmol <br>· Caseta de vigilancia con intercomunicación a cada casa <br>· Estacionamiento para visitas (5 al exterior y 2 en estacionamiento de lofts) <br>· Un área de amenidades que incluye servicios sanitarios para hombres y mujeres, espacio para un asador, terraza, cubierta y jardín <br>· Borgo Frassino está ubicado a dos minutos caminando del parque de Lomes Verdes (Skatepark, pista de jogging, juegos para niños, áreas verdes) <br>· Doble red de agua: agua potable y agua tratada para cuidar el ambiente y economizar el consumo de agua potable hasta un 30% <br>· Doble red de drenaje: Red de drenaje sanitario y red de drena- je pluvial que vertimos a las cañadas para la recarga de <br>mantos acuíferos en pro del ambiente <br>· Redes totalmente subterráneas evitando la contaminación visual <br>· Red de fibra óptica operada por Telmex <br>· Red de gas natural operada por Maxigas <br><br>Contamos con increíbles facilidades de pago, ¿qué esperas? Contáctenos ya! VISITA LA CASA MUESTRA! Ven a visitarnos en nuestra Oficina de Ventas en el centro comercial Plaza Argos, en General Agustín de Iturbide 2 esquina con Blvd. Hernán Cortez. <br><br>Borgo Frassino - !Mas que casa, piensa en hogar!\",\n    \"img\":{\n      \"src\": \"https://img10.naventcdn.com/avisos/18/00/54/81/15/53/360x266/131982081.jpg\"\n    },\n    \"prices\": {\n      \"amount\": \"8869913\",\n      \"formattedAmount\": \"8,869,913\",\n      \"currencyUid\": \"10\",\n      \"currency\": \"MX\"\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/properties",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PROPERTY",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/properties/5dfecfd654fccf2e77a4b34b",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties",
+						"5dfecfd654fccf2e77a4b34b"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

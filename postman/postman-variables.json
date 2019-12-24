@@ -1,0 +1,54 @@
+{
+	"id": "991bace5-2880-4c6a-996c-38ffda4506f0",
+	"name": "truehome-express",
+	"values": [
+		{
+			"key": "url",
+			"value": "http://localhost:3002",
+			"enabled": true
+		},
+		{
+			"key": "client_url",
+			"value": "http://localhost:8001",
+			"enabled": true
+		},
+		{
+			"key": "access_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZGM3NzE4OGZhZTNmZTRhNGUxZTE3NGUiLCJuYW1lIjoiR3VpbGxlcm1vIiwiZW1haWwiOiJndWlsbGVybW9AZ21haWwuY29tIiwic2NvcGVzIjpbInNpZ25pbjphdXRoIiwic2lnbnVwOmF1dGgiLCJyZWFkOm1vdmllcyIsImNyZWF0ZTptb3ZpZXMiLCJ1cGRhdGU6bW92aWVzIiwiZGVsZXRlOm1vdmllcyIsInJlYWQ6dXNlci1tb3ZpZXMiLCJjcmVhdGU6dXNlci1tb3ZpZXMiLCJkZWxldGU6dXNlci1tb3ZpZXMiXSwiaWF0IjoxNTc2OTc1NDUzLCJleHAiOjE1NzY5NzYzNTN9.lDogx4CtO4wRFBwHJt8QVuJUgCubRtD_MHu-8_YPIGo",
+			"enabled": true
+		},
+		{
+			"key": "movie_id",
+			"value": "5dc75a2949ab2937ffd3449f",
+			"enabled": true
+		},
+		{
+			"key": "admin_api_key_token",
+			"value": "9d78e34027300375ec0c3a21fd629e437cac67a709a0d4529c0f76b252155567",
+			"enabled": true
+		},
+		{
+			"key": "public_api_key_token",
+			"value": "b6226beaee8b36677f49939b0e54e36020b5c5c43876022626a8642fbfe4b75d",
+			"enabled": true
+		},
+		{
+			"key": "user_id",
+			"value": "5dc3a9a986b3022dc73b4e5b",
+			"enabled": true
+		},
+		{
+			"key": "user_movie_id",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "property_id",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-12-22T07:17:06.609Z",
+	"_postman_exported_using": "Postman/7.14.0"
+}
