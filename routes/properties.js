@@ -28,8 +28,8 @@ function propertiesApi(app) {
 
   router.get(
     '/',
-    passport.authenticate('jwt', { session: false }),
-    scopesValidationHandler(['read:movies']),
+    // passport.authenticate('jwt', { session: false }),
+    // scopesValidationHandler(['read:movies']),
     async function(req, res, next) {
       cacheResponse(res, FIVE_MINUTES_IN_SECONDS);
       const { tags } = req.query;
