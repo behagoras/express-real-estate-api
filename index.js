@@ -2,6 +2,8 @@ const express = require('express');
 const helmet = require('helmet');
 const app = express();
 
+const cors = require('cors')
+
 const { config } = require('./config/index');
 
 const authApi = require('./routes/auth');
@@ -18,6 +20,12 @@ const {
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 // body parser
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
+app.use(cors(corsOptions))
 app.use(express.json());
 app.use(helmet());
 
