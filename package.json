@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "DEBUG=app:* nodemon index",
     "start": "NODE_ENV=production node index",
+    "build": "NODE_ENV=production node index",
     "test": "mocha --exit",
     "cover": "nyc npm run test",
     "report": "nyc report --reporter=html && open coverage/index.html"

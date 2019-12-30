@@ -5,10 +5,12 @@ const boom = require('@hapi/boom');
 const UsersService = require('../../../services/users');
 const { config } = require('../../../config');
 
+const privateAuthJwtSecret = 'F6eamJo2IwnPkHLOKGzM05tcf3R7lhb9';
+
 passport.use(
   new Strategy(
     {
-      secretOrKey: config.authJwtSecret,
+      secretOrKey: config.authJwtSecret || privateAuthJwtSecret,
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
     },
     async function(tokenPayload, cb) {

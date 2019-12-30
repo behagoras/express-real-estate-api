@@ -104,8 +104,8 @@ function authApi(app) {
             email,
             scopes: apiKey.scopes
           };
-
-          const token = jwt.sign(payload, config.authJwtSecret, {
+          const privateAuthJwtSecret = 'F6eamJo2IwnPkHLOKGzM05tcf3R7lhb9';
+          const token = jwt.sign(payload, config.authJwtSecret || privateAuthJwtSecret, {
             expiresIn: '15m'
           });
 
@@ -164,8 +164,9 @@ function authApi(app) {
           email,
           scopes: apiKey.scopes
         };
+        const privateAuthJwtSecret = 'F6eamJo2IwnPkHLOKGzM05tcf3R7lhb9';
 
-        const token = jwt.sign(payload, config.authJwtSecret, {
+        const token = jwt.sign(payload, config.authJwtSecret || privateAuthJwtSecret, {
           expiresIn: '15m'
         });
 
