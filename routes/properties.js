@@ -80,7 +80,7 @@ function propertiesApi(app) {
 
         res.status(201).json({
           data: createdPropertyUid,
-          message: 'movie created'
+          message: 'property created'
         });
       } catch (err) {
         next(err);

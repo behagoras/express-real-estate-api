@@ -6,12 +6,27 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/54/81/15/53/360x266/131982081.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 8869913,
       formattedAmount: '8,869,913',
       currencyUid: '10',
       currency: 'MX'
     },
+
   },
   {
     uid: '57391488',
@@ -19,6 +34,20 @@ const propertiesMock = [
     description: 'Excelente oportunidad de casa con 520 mt construidos, consta de sala, comedor, family en desnivel de muy buen tamaño, cocina integral, área de servicio muy amplia, 5 recámaras con 3 baños completos. Jardín interior al frente de 55 mt. zona exterior para mascotas grandes. Patio interior de 70 mt, y alberca climatizada . <br>Consta con sistema de seguridad completo: cerco eléctrico con alarmas, sistemas de seguridad de cámaras nocturnas , chat de vecino vigilante, .Lugar para 2 coches o 3 dependiendo del tamaño. Vigilancia. Cerca de centros comerciales, escuelas SINAGOGAS, TEMPLOS.A UNAS CUADRAS DEL PARQUE DE BOULEVARD DE LA LUZ REMODELADA EN 2017.',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/39/14/88/360x266/144877631.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 14000000,
@@ -34,6 +63,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/56/83/74/19/360x266/136815682.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 3500000,
       formattedAmount: '3,500,000',
@@ -47,6 +90,20 @@ const propertiesMock = [
     description: 'Casa Cibeles, del despacho Demariaycampos es un proyecto residencial contemporáneo por sus acabados y sobre todo por el estilo de vida que ofrece habitar este inmueble. <br>Ubicación discreta en calle de transito local a una cuadra de Monte Líbano. Viva en áreas abiertas, privilegiando la luz y el contacto con el exterior. (terraza y jardín) <br>En dos niveles, con amplias y cómodas escaleras. Doble altura en acceso que baña de luz la casa todo el día. <br>Acabados naturales, mármol, acero, maderas de teka y tzalam. <br>Cuatro amplias recamaras con baño y vestidor. <br><br>ESTUDIO.inmobiliario <br>te ayudamos a comprar',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/13/14/94/360x266/146555980.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 24990000,
@@ -62,6 +119,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/35/64/61/360x266/144343162.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 4790000,
       formattedAmount: '4,790,000',
@@ -75,6 +146,20 @@ const propertiesMock = [
     description: 'Hermosa casa en una zona privilegiada en el corazón de Satélite. La propiedad se encuentra ubicada en esquina, en una calle privada con seguridad 24/7 y cuenta con acceso controlado.  La propiedad está integrada por la casa principal y un departamento anexo con acceso independiente con la siguente distribución: La casa principal en la planta baja cuenta con estancia, área de sala, comedor, baño completo para visitas, closet de blancos, amplia cocina con cocina integral, patio de servicio y cuarto de servicio con baño completo; en el primer nivel se ubican sus tres habitaciones, cada una con closet, en el pasillo distrubuidor se encuentra un clóset de blancos y comunica con un baño completo con jacuzzi.  El departamento anexo, cuenta con acceso independiente por la calle y también se puede accesar por medio del patio de servicio. La distribución es la siguiente; en la planta baja cuenta con estancia, cocina integral, baño completo y una pequeña bodega de almacenamiento aprovechando la parte inferior de las escaleras; en el primer nivel se ubica una amplia recámara con clóset.  En general la propiedad tiene una muy buena luz natural, cuenta con tres lugares de estacionamiento, uno de ellos en el garage de acceso principal y dos en la parte exterior. La ubicación de la propiedad es excelente por encontrarse en una privada muy segura, a 2 calles de Av. Adolfo López Mateos, a tres minutos de Plaza Satélite y Mundo E, club de Golf bellavista a 10 min., excelentes vias de acceso com',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/42/00/00/360x266/145328021.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 3950000,
@@ -90,6 +175,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/31/23/61/360x266/143678792.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 11000000,
       formattedAmount: '11,000,000',
@@ -103,6 +202,20 @@ const propertiesMock = [
     description: 'Increíble casa en Tecamachalco con 3 habitaciones y 612 m2 de construcción. En la entrada, recibidor amplio con una fuente el cual da acceso a la sala formal con acceso al jardín. Comedor formal de buen tamaño con mucha luz natural. Cocina amplia con isla, dos tajas y mucho espacio de guardado. Cuenta con entrada independiente y acceso al antecomedor. Salón de juegos con bar y cava, el cual tiene a acceso al jardín con deck y jacuzzi grande. En el segundo piso, tres recamaras, La recamara principal cuenta con balcón con vista al jardín, walk in closet de buen tamaño y baño completo con dos lavabos y jacuzzi con hidromasaje. Recamaras secundarias también con walk in closet de buen tamaño y baño completo. Cuenta con cuarto de lavado con área de tendido y dos cuartos de servicio los cuales comparten baño completo. Garage con dos estacionamientos y entrada independiente.',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/41/98/90/360x266/145325852.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 21500000,
@@ -118,6 +231,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/41/94/70/360x266/145316660.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 5800000,
       formattedAmount: '5,800,000',
@@ -131,6 +258,20 @@ const propertiesMock = [
     description: 'Excelente ubicación muy cerca de Zonas Comerciales. <br>Parte baja de Tecamachalco <br>Casa en un Nivel muy comoda ,con espacios amplios, ideal para Personalizar <br>4 recámaras, antecomedor con salida a al jardín, Area social con techos altos y vistas arboladas, Cocina con mucha luz,2 cuartos de servicio, lugar para 4 autos techados. <br>Super opciòn por su terreno y ubicación <br>Con gusto te atendemos !!!',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/45/83/60/360x266/145889532.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 22650000,
@@ -146,6 +287,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/56/19/74/52/360x266/127094026.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 4400000,
       formattedAmount: '4,400,000',
@@ -159,6 +314,20 @@ const propertiesMock = [
     description: 'RESIDENCIA EN SATELITE, EN UNO DE LOS PRINCIPALES CIRCUITOS, TOTALMENTE REMODELADA Y RODEADA DE AREAS VERDES, CERCANA AL PERIFERICO, AMPLISIMOS ESPACIOS, CONSTA DE ESTACIONAMIENTO PARA 8 AUTOS CUBIERTOS, RECIBIDOR, DESPACHO, MEDIO BAÑO DE VISITA, SALA RECIBIDOR, APLÍSIMA COCINA CON ANTECOMEDOR, SALA COMEDOR CORRIDOS Y MUY AMPLIOS CON VISTA AL JARDIN DE 250 M2 CUATRO RECAMARAS CON BAÑO CADA UNA CON SALA O ESTUDIO, TODA LA CASA CON MUCHA ILUMINACION NATURAL, INDEPENDIENTEMENTE SE ENCUENTRA EL AREA DE LAVADO, CUARTO DE SERVICIO CON BAÑO Y ESPACIOSA BODEGA. 55 <span class=\\\'descripcionDatosAnunciante\\\'><button class=\\\'btn btn-link js-verDatos\\\' href=\\\'#\\\'>Ver datos</button></span>',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/51/41/04/40/360x266/53717318.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 16000000,
@@ -174,6 +343,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/56/35/42/50/360x266/129305761.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 10700000,
       formattedAmount: '10,700,000',
@@ -187,6 +370,20 @@ const propertiesMock = [
     description: 'Cómoda Casa de gran tamaño en la Colonia La Florida, cuenta con todo lo necesario para vivir, al entrar a la propiedad encuentras un baño de visitas con buenos acabados junto a un estudio que podría convertirse en un cuarto. La estancia cuenta de igual forma con gran tamaño para sala y comedor destacando la gran iluminación gracias a las ventanas de piso a techo siendo también la salida al patio, ideal para convivencias o para proyectos. La cocina integral cuenta con un excelente diseño, gran espacio de guardado e iluminación natural ideal para el uso en el día a día. En el segundo nivel encontramos cuatro cómodas recamaras, tres de ellas comparten una baño completo que cuenta con acabados en excelente estado, la recamara principal con vestidor tocador y baño completo cuenta con gran espacio e iluminación. La propiedad cuenta con tres lugares de estacionamiento, el acceso al estacionamiento puede convertirse en portón eléctrico. Además cuenta con un cuarto de servicio con baño para convertir este inmueble en un lugar muy confortable para vivir. ¡Recién remodelado y listo para habitar!',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/41/96/73/360x266/145321255.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 6700000,
@@ -202,6 +399,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/41/99/03/360x266/145326237.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 15800000,
       formattedAmount: '15,800,000',
@@ -215,6 +426,20 @@ const propertiesMock = [
     description: 'La casa cuenta con 5 recámaras en 3 niveles, la propiedad tiene 3 baños completos, cocina integral, sala y comedor. Espacios también para usar como estudio o sala de tv.',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/56/29/24/41/360x266/128448423.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 1500000,
@@ -230,6 +455,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/21/46/52/360x266/142186994.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     prices: {
       amount: 3200000,
       formattedAmount: '3,200,000',
@@ -243,6 +482,20 @@ const propertiesMock = [
     description: 'Magnífica propiedad ubicada dentro de un exclusivo fraccionamiento con calles de cantera con 867 m2 de terreno y 958.94 m2 de construcción. Con 5 desniveles, al entrar a la Propiedad podemos encontrar un recibidor junto con un muy amplio Estudio y un medio Baño con excelentes acabados para visitas, La sala con gran iluminación y chimenea funcional, tiene gran interacción con el comedor que destaca por su gran espacio y conexión con la impresionante cocina integral de alta gama, ideal para uso del día a día, cuenta con gran espacio de Guardado y ante comedor, sin duda el corazón de la casa. Cuenta con Área de lavado y planchado, una segunda sala que conecta con las escaleras que nos llevan primero a la Imponente Habitación principal que tiene vestidor en un segundo piso con Maderas finas y un Baño completo, después, encontramos una muy cómoda sala de TV que conecta con dos Habitaciones una de ellas con balcón con vista inigualable, closet y baño completo, siguiente cuenta con terraza, closet y baño completo. En el tercer piso encontramos un salón con Baño completo muy iluminado, un gimnasio, y una cuarta habitación con Closet y Baño completo. La casa adicional cuenta con 5 lugares de estacionamiento, un extraordinario jardín, alberca, asador, dos cuartos de servicio con Baño completo, cuarto para chófer con baño completo, Vigilancia las 24 hrs, inmejorable vista panorámica, sin duda un lugar perfecto para vivir.',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/57/41/97/16/360x266/145321997.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     prices: {
       amount: 20500000,
@@ -258,6 +511,20 @@ const propertiesMock = [
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/53/89/23/63/360x266/95937939.jpg',
     },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
+    },
     currencyId: '10',
     amount: 11500000,
     formattedAmount: '11,500,000',
@@ -271,6 +538,20 @@ const propertiesMock = [
     description: 'Casa totalmente remodelada en la mejor zona de Lomas de Tecamachalco estilo contemporáneo-moderno, llena de detalles arquitectónicos, carpintería del más alto nivel, pisos de madera y mármol, cubiertas de granito e iluminación ambiental que generan atmósferas únicas. <br><br>Lista para estrenar, la casa tiene 500 m2 de terreno y 500 m2 de construcción distribuida en 2 niveles, tiene 3 recamaras con baños y walk in closets, 3 cuartos de TV, bar, sala, comedor, cocina con desayunador, amplio jardín, tres terrazas, garaje, cuarto de servicio, lavandería y tres bodegas. <br><br>También cuenta con sistema de cámaras, calefacción y vigilancia privada. Haz una cita para conocerla!',
     img:{
       src: 'https://img10.naventcdn.com/avisos/18/00/55/81/04/43/360x266/121408676.jpg',
+    },
+    address:{
+      street: "Valle de Malaga 13C casa 7",
+      city: "México",
+      state: "Estado de México",
+      zip: "52787",
+    },
+    owner: {
+      fullName: "David Behar Lombrozo",
+      residencePhone: "5516988310",
+      email: "david@behar.io",
+      birthplace: "México",
+      mobilePhone: "5516988310",
+      gender: "male",
     },
     currencyId: '10',
     amount: 23950000,
