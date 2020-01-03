@@ -89,11 +89,11 @@ function propertiesApi(app) {
   );
 
   router.put(
-    '/:movieId',
+    '/:propertyUid',
     // passport.authenticate('jwt', { session: false }),
     // scopesValidationHandler(['update:movies']),
-    validationHandler({ movieId: propertyUidSchema }, 'params'),
-    validationHandler(updatePropertySchema),
+    // validationHandler({ movieId: propertyUidSchema }, 'params'),
+    // validationHandler(updatePropertySchema),
     async function(req, res, next) {
       const { propertyUid } = req.params;
       const { body: property } = req;
@@ -105,6 +105,7 @@ function propertiesApi(app) {
         });
 
         res.status(200).json({
+          propertyUid:propertyUid,
           data: updatedPropertyUid,
           message: 'property updated'
         });
@@ -115,18 +116,17 @@ function propertiesApi(app) {
   );
 
   router.delete(
-    '/:movieId',
+    '/:propertyUid',
     // passport.authenticate('jwt', { session: false }),
-    // scopesValidationHandler(['deleted:movies']),
-    validationHandler({ movieId: propertyUidSchema }, 'params'),
+    // scopesValidationHandler(['read:movies']),
+    validationHandler({ propertyUid: propertyUidSchema }, 'params'),
     async function(req, res, next) {
       const { propertyUid } = req.params;
-
       try {
-        const deletedPropertyUid = await propertiesService.deleteProperty({ propertyUid });
+        const properties = await propertiesService.deleteProperty({ propertyUid });
 
         res.status(200).json({
-          data: deletedPropertyUid,
+          data: properties,
           message: 'property deleted'
         });
       } catch (err) {
@@ -135,5 +135,6 @@ function propertiesApi(app) {
     }
   );
 }
+
 
 module.exports = propertiesApi;

@@ -42,7 +42,9 @@ const updatePropertySchema = {
   _id: propertyUidSchema,
   title: propertyTitleSchema,
   description: propertyDescriptionSchema,
+  owner:ownerSchema,
   img: imgSchema,
+  address:addressSchema,
   prices: pricesSchema,
 };
 
