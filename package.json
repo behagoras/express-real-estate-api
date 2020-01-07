@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "dev": "DEBUG=app:* nodemon index",
     "start": "NODE_ENV=production node index",
-    "start:inspect": "NODE_ENV=production node --inspect index ",
     "build": "NODE_ENV=production node index",
     "test": "mocha --exit",
     "cover": "nyc npm run test",
@@ -37,7 +39,7 @@
     "passport-google-oauth20": "2.0.0",
     "passport-http": "0.3.0",
     "passport-jwt": "4.0.0",
-    "passport-twitter": "1.0.4"
+    "passport-twitter": "1.0.4",
   },
   "devDependencies": {
     "chalk": "2.4.2",

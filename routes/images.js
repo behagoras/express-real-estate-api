@@ -12,61 +12,32 @@ function propertiesApi(app) {
         storage: multerGoogleStorage.storageEngine()
     });
 
-    // multer local files
-    const storage = multer.diskStorage({
-        destination: './uploads/',
-        filename: function (req, file, cb) {
-            // Mimetype stores the file type, set extensions according to filetype
-            switch (file.mimetype) {
-            case 'image/jpeg':
-                ext = '.jpeg';
-                break;
-            case 'image/png':
-                ext = '.png';
-                break;
-            case 'image/gif':
-                ext = '.gif';
-                break;
-            }
-
-            cb(null, file.originalname.slice(0, 4) + Date.now() + ext);
-        }
-    });
-    const upload = multer({storage: storage});
-
-    // Post image to local files
-    router.post(
-        '/local',
-        upload.single('file'),
-        async function(req, res, next) {
-            if (req.file && req.file.originalname) {
-                console.log(`Received file ${req.file.originalname}`);
-                console.log(req.file);
-                }
-                try {
-                // const createdPropertyUid = await propertiesService.createProperty({ property });
-                res.status(201).json({
-                    responseText: req.file.path,
-                    message: 'POST image'
-                });
-                } catch (err) {
-                next(err);
-                }
-        }
-    );
-
     //post image to GCP
     router.post(
         '/', 
         uploadGcpHandler.any(), 
         // eslint-disable-next-line no-unused-vars
-        async function (req, res, next) {
+        function (req, res, next) {
             // eslint-disable-next-line no-console
-            console.log(req.files);
-            res.status(201).json({
-                data:req.files,
-                message: 'image created'
-            });
+            try {
+                // res.setHeader('Access-Control-Allow-Origin', '*')
+                // res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
+                // res.setHeader(
+                //     'Access-Control-Allow-Headers',
+                //     'Authorization, Accept, Content-Type'
+                //     )
+                res.setHeader("cache-control", "s-maxage=63072000 maxage63072000");
+
+                console.log(req.files);
+                res.status(201).json({
+                    data:req.files,
+                    message: 'image created'
+                });
+            } catch (error) {
+                res.json(error);
+            }
+
+            // res.setHeader('Access-Control-Allow-Headers', 'authorization, content-type');
         }
     );
 }

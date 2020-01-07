@@ -46,3 +46,5 @@ app.use(wrapErrors);
 app.use(errorHandler);
 
 app.listen(config.port);
+
+console.log('listening on port '+config.port );
