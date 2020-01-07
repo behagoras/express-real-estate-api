@@ -10,6 +10,7 @@ const authApi = require('./routes/auth');
 const moviesApi = require('./routes/movies.js');
 const userMoviesApi = require('./routes/userMovies.js');
 const propertiesApi = require('./routes/properties');
+const imagesApi = require('./routes/images');
 
 const {
   logErrors,
@@ -34,6 +35,7 @@ authApi(app);
 moviesApi(app);
 userMoviesApi(app);
 propertiesApi(app);
+imagesApi(app);
 
 // Catch 404
 app.use(notFoundHandler);
