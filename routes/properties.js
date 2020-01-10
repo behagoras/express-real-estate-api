@@ -31,7 +31,7 @@ function propertiesApi(app) {
     // passport.authenticate('jwt', { session: false }),
     // scopesValidationHandler(['read:movies']),
     async function(req, res, next) {
-      cacheResponse(res, FIVE_MINUTES_IN_SECONDS);
+      // cacheResponse(res, FIVE_MINUTES_IN_SECONDS);
       const { tags } = req.query;
 
       try {
@@ -53,7 +53,7 @@ function propertiesApi(app) {
     // scopesValidationHandler(['read:movies']),
     validationHandler({ propertyUid: propertyUidSchema }, 'params'),
     async function(req, res, next) {
-      cacheResponse(res, SIXTY_MINUTES_IN_SECONDS);
+      // cacheResponse(res, SIXTY_MINUTES_IN_SECONDS);
       const { propertyUid } = req.params;
       try {
         const properties = await propertiesService.getProperty({ propertyUid });
