@@ -1,6 +1,8 @@
 const express = require('express');
 const multer = require('multer');
 const multerGoogleStorage = require("multer-google-storage");
+const filesUpload = require('../utils/middleware/filesUpload');
+const path = require('path')
 
 function propertiesApi(app) {
 
@@ -9,12 +11,17 @@ function propertiesApi(app) {
 
     //upload to gcp using .env variables
     const uploadGcpHandler = multer({
-        storage: multerGoogleStorage.storageEngine()
+        storage: multerGoogleStorage.storageEngine({
+            keyFilename:path.join(__dirname,'../googleCloudKeyFile.json'),
+            projectId:'behagoras',
+            bucket:'behagoras.appspot.com',
+        })
     });
 
     //post image to GCP
     router.post(
-        '/', 
+        '/',
+        filesUpload.filesUpload, 
         uploadGcpHandler.any(), 
         // eslint-disable-next-line no-unused-vars
         function (req, res, next) {
@@ -26,8 +33,7 @@ function propertiesApi(app) {
                 //     'Access-Control-Allow-Headers',
                 //     'Authorization, Accept, Content-Type'
                 //     )
-                res.setHeader("cache-control", "s-maxage=63072000 maxage63072000");
-
+                // res.setHeader("cache-control", "s-maxage=63072000 maxage63072000");
                 console.log(req.files);
                 res.status(201).json({
                     data:req.files,

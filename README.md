@@ -23,6 +23,7 @@ Important fields:
 - `DB_PORT=` The mongo database, the default is `27017`
 - `AUTH_JWT_SECRET=` Create a JSON Web Token Secret, you can use a online service like mkjwk https://mkjwk.org/
 - `AUTH_JWT_SECRET=` Create a 264 bits  based key (You can use a service like [keygen.io](https://keygen.io))
+- `googleCloudKeyFile.json` Use a generated Google Cloud KeyFile with writing access for the /api/images endpoint based on the [googleCloudKeyFile.example.json](./googleCloudKeyFile.example.json)
 
 The rest environment variables are not important.
 

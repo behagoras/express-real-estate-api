@@ -164,3 +164,5 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/node,linux,macos,windows
 
 Behagoras-b81201da1c4a.json
+behagoras-firebase-adminsdk-2vgjz-c1d275b40a.json
+googleCloudKeyFile.json
