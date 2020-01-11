@@ -568,11 +568,11 @@ function filteredPropertiesMock(tag) {
 }
 
 class PropertiesServiceMock {
-  async getMovies() {
+  async getProperties() {
       return Promise.resolve(propertiesMock);
   }
 
-  async createMovie() {
+  async createProperty() {
       return Promise.resolve(propertiesMock[0]);
   }
 }

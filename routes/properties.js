@@ -1,21 +1,21 @@
 const express = require('express');
-const passport = require('passport');
+// const passport = require('passport');
 const PropertiesService = require('../services/properties');
 
 const {
   propertyUidSchema,
   createPropertySchema,
-  updatePropertySchema,
+  // updatePropertySchema,
 } = require('../utils/schemas/properties');
 
 const validationHandler = require('../utils/middleware/validationHandler');
-const scopesValidationHandler = require('../utils/middleware/scopesValidationHandler');
+// const scopesValidationHandler = require('../utils/middleware/scopesValidationHandler');
 
-const cacheResponse = require('../utils/cacheResponse');
-const {
-  FIVE_MINUTES_IN_SECONDS,
-  SIXTY_MINUTES_IN_SECONDS
-} = require('../utils/time');
+// const cacheResponse = require('../utils/cacheResponse');
+// const {
+//   FIVE_MINUTES_IN_SECONDS,
+//   SIXTY_MINUTES_IN_SECONDS
+// } = require('../utils/time');
 
 // JWT strategy
 require('../utils/auth/strategies/jwt');
@@ -29,16 +29,16 @@ function propertiesApi(app) {
   router.get(
     '/',
     // passport.authenticate('jwt', { session: false }),
-    // scopesValidationHandler(['read:movies']),
+    // scopesValidationHandler(['read:property']),
     async function(req, res, next) {
       // cacheResponse(res, FIVE_MINUTES_IN_SECONDS);
       const { tags } = req.query;
 
       try {
-        const movies = await propertiesService.getProperties({ tags });
+        const property = await propertiesService.getProperties({ tags });
 
         res.status(200).json({
-          data: movies,
+          data: property,
           message: 'properties listed'
         });
       } catch (err) {
@@ -50,7 +50,7 @@ function propertiesApi(app) {
   router.get(
     '/:propertyUid',
     // passport.authenticate('jwt', { session: false }),
-    // scopesValidationHandler(['read:movies']),
+    // scopesValidationHandler(['read:property']),
     validationHandler({ propertyUid: propertyUidSchema }, 'params'),
     async function(req, res, next) {
       // cacheResponse(res, SIXTY_MINUTES_IN_SECONDS);
@@ -71,7 +71,7 @@ function propertiesApi(app) {
   router.post(
     '/',
     // passport.authenticate('jwt', { session: false }),
-    // scopesValidationHandler(['create:movies']),
+    // scopesValidationHandler(['create:property']),
     validationHandler(createPropertySchema),
     async function(req, res, next) {
       const { body: property } = req;
@@ -91,7 +91,7 @@ function propertiesApi(app) {
   router.put(
     '/:propertyUid',
     // passport.authenticate('jwt', { session: false }),
-    // scopesValidationHandler(['update:movies']),
+    // scopesValidationHandler(['update:property']),
     // validationHandler({ movieId: propertyUidSchema }, 'params'),
     // validationHandler(updatePropertySchema),
     async function(req, res, next) {
@@ -118,7 +118,7 @@ function propertiesApi(app) {
   router.delete(
     '/:propertyUid',
     // passport.authenticate('jwt', { session: false }),
-    // scopesValidationHandler(['read:movies']),
+    // scopesValidationHandler(['read:property']),
     validationHandler({ propertyUid: propertyUidSchema }, 'params'),
     async function(req, res, next) {
       const { propertyUid } = req.params;

@@ -7,8 +7,6 @@ const cors = require('cors')
 const { config } = require('./config/index');
 
 const authApi = require('./routes/auth');
-const moviesApi = require('./routes/movies.js');
-const userMoviesApi = require('./routes/userMovies.js');
 const propertiesApi = require('./routes/properties');
 const imagesApi = require('./routes/images');
 
@@ -32,8 +30,6 @@ app.use(helmet());
 
 // routes
 authApi(app);
-moviesApi(app);
-userMoviesApi(app);
 propertiesApi(app);
 imagesApi(app);
 
