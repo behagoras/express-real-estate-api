@@ -279,6 +279,42 @@
 			"response": []
 		},
 		{
+			"name": "GET SPECIFIC PROPERTY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/properties/5e18aff2fbd7d2a15d161585",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties",
+						"5e18aff2fbd7d2a15d161585"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET FIRST PROPERTY",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -360,6 +396,51 @@
 			"response": []
 		},
 		{
+			"name": "EDIT SPECIFIC PROPERTY PRICE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Borgo Frassin\",\n  \"description\": \"a\",\n  \"address\": {\n    \"street\": \"Valle de Malaga 13C casa 7\",\n    \"city\": \"México\",\n    \"state\": \"Estado de México\",\n    \"zip\": \"52787\"\n  },\n  \"owner\": {\n    \"fullName\": \"David Behar Lombrozo\",\n    \"residencePhone\": \"5516988310\",\n    \"email\": \"david@behar.io\",\n    \"birthplace\": \"México\",\n    \"mobilePhone\": \"5516988310\"\n  },\n  \"prices\": {\n    \"amount\": 8869913,\n    \"formattedAmount\": 8869913,\n    \"currency\": \"mxn\"\n  },\n  \"img\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/properties/5e0f1664999460fc70773409",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties",
+						"5e0f1664999460fc70773409"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "CREATE PROPERTY",
 			"request": {
 				"auth": {
@@ -383,7 +464,51 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Borgo Frassino\",\n    \"description\": \"A sólo 25min de Santa Fe y 20 min de Interlomas, Borgo Frassino es un condominio residencial único con 16 casas y 10 departamentos tipo Loft. El conjunto esta situado dentro del exclusivo fraccionamiento Residencial Lomas Verdes, en la 6a Sección de Lomas Verdes. Inspirado en pequeños pueblos que nacieron en la edad media en Italia la exclusividad, belleza y seguridad de el conjunto se desarrolla en 16 casas y 10 departamentos estilo Loft. Con doble acceso de seguridad las 24 horas, zona de amenidades espaciosa, estacionamientos amplios y más de 10 hectáreas de parque a pocos minutos caminando, Borgo Frassino es un condominio excepcional. Cada hogar está desarrollado en los mínimos particulares, usando acabados de primera, como cocinas Teka, y prefiriendo materiales naturales, como la cantera y mármol, para que cada hogar sea único en su desarrollo de espacios, que están pensados para adaptarse a todas las etapas de tu vida. Ven a visitar la Casa Muestra para que puedas ver con tus propios ojos esta oportunidad única de inversión para ti y tu familia. <br><br>El condominio cuenta con amplias casas de cuatro recámaras con cuatro y medio baños que se distribuyen en tres o cuatro pisos e que incluyen dos terrazas y patio con cuarto de servicio. Los departamentos son tipo loft y se dividen en dos pisos y cuentan con tres recámaras y tres y medio baños con cuarto de servicio y la opción te tener una terraza muy espaciosa. <br><br>Borgo Frassino cuenta con los siguientes servicios: <br><br>· Doble seguridad con dos puertas de acceso vigiladas <br>· Acabos de lujo, como cocinas de granito con equipo Teka y baños con acabados en marmol <br>· Caseta de vigilancia con intercomunicación a cada casa <br>· Estacionamiento para visitas (5 al exterior y 2 en estacionamiento de lofts) <br>· Un área de amenidades que incluye servicios sanitarios para hombres y mujeres, espacio para un asador, terraza, cubierta y jardín <br>· Borgo Frassino está ubicado a dos minutos caminando del parque de Lomes Verdes (Skatepark, pista de jogging, juegos para niños, áreas verdes) <br>· Doble red de agua: agua potable y agua tratada para cuidar el ambiente y economizar el consumo de agua potable hasta un 30% <br>· Doble red de drenaje: Red de drenaje sanitario y red de drena- je pluvial que vertimos a las cañadas para la recarga de <br>mantos acuíferos en pro del ambiente <br>· Redes totalmente subterráneas evitando la contaminación visual <br>· Red de fibra óptica operada por Telmex <br>· Red de gas natural operada por Maxigas <br><br>Contamos con increíbles facilidades de pago, ¿qué esperas? Contáctenos ya! VISITA LA CASA MUESTRA! Ven a visitarnos en nuestra Oficina de Ventas en el centro comercial Plaza Argos, en General Agustín de Iturbide 2 esquina con Blvd. Hernán Cortez. <br><br>Borgo Frassino - !Mas que casa, piensa en hogar!\",\n    \"img\":{\n      \"src\": \"https://img10.naventcdn.com/avisos/18/00/54/81/15/53/360x266/131982081.jpg\"\n    },\n    \"prices\": {\n      \"amount\": \"8869913\",\n      \"formattedAmount\": \"8,869,913\",\n      \"currencyUid\": \"10\",\n      \"currency\": \"MX\"\n    }\n  }",
+					"raw": "{\n\t\"title\":\"Title\",\n\t\"description\":\"Desription\",\n\t\"img\":{\n\t\t\"src\":\"https://img10.naventcdn.com/avisos/18/00/54/81/15/53/360x266/131982081.jpg\"\n\t},\n\t\"address\":{\n\t\t\"street\":\"Valle de Malaga 13C casa 7\",\n\t\t\"city\":\"México\",\n\t\t\"state\":\"Estado de México\",\n\t\t\"zip\":\"52787\"\n\t},\n\t\"owner\":{\n\t\t\"fullName\":\"David Behar Lombrozo\",\n\t\t\"residencePhone\":\"5516988310\",\n\t\t\"email\":\"david@behar.io\",\n\t\t\"birthplace\":\"México\",\n\t\t\"mobilePhone\":\"5516988310\",\n\t\t\"gender\":\"male\"\n\t},\n\t\"prices\":{\n\t\t\"amount\":\"5\",\n\t\t\"formattedAmount\":\"5\",\n\t\t\"currencyUid\":\"10\",\n\t\t\"currency\":\"mxn\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/properties",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE PROPERTY Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Voluptatem exercitat\",\n  \"description\": \"In aut velit adipisi\",\n  \"address\": {\n    \"street\": \"Rerum a mollit et do\",\n    \"city\": \"Mollitia ullam qui p\",\n    \"state\": \"Impedit sint vero d\",\n    \"zip\": \"30268\"\n  },\n  \"fullName\": \"Hedley Michael\",\n  \"residencePhone\": \"+1 (695) 199-7371\",\n  \"email\": \"tizarusile@mailinator.com\",\n  \"birthplace\": \"Ex enim est asperio\",\n  \"mobilePhone\": \"+1 (715) 603-7077\",\n  \"prices\": {\n    \"amount\": \"593\",\n    \"formattedAmount\": \"593\",\n    \"currency\": \"cad\"\n  },\n  \"img\": {\n    \"src\": \"https://img10.naventcdn.com/avisos/18/00/54/81/15/53/360x266/131982081.jpg\"\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -427,6 +552,66 @@
 						"api",
 						"properties",
 						"5dfecfd654fccf2e77a4b34b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE FIRST PROPERTY",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/properties/{{property_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"properties",
+						"{{property_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IMAGE UPLOAD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/davidbehar/Desktop/eventloop.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/images/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"images",
+						""
 					]
 				}
 			},
