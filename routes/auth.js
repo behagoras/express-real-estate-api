@@ -76,24 +76,24 @@ function authApi(app) {
     const { apiKeyToken } = req.body;
 
     if (!apiKeyToken) {
-      next(boom.unauthorized('apiKeyToken is required'));
+      return next(boom.unauthorized('apiKeyToken is required'));
     }
 
     passport.authenticate('basic', function (error, user) {
       try {
         if (error || !user) {
-          next(boom.unauthorized());
+          return next(boom.unauthorized());
         }
 
         req.login(user, { session: false }, async function (err) {
           if (err) {
-            next(err);
+            return next(err);
           }
 
           const apiKey = await apiKeysService.getApiKey({ token: apiKeyToken });
 
           if (!apiKey) {
-            next(boom.unauthorized());
+            return next(boom.unauthorized());
           }
 
           const { _id: id, name, email } = user;
@@ -145,7 +145,7 @@ function authApi(app) {
       const { apiKeyToken, ...user } = body;
 
       if (!apiKeyToken) {
-        next(boom.unauthorized('apiKeyToken is required'));
+        return next(boom.unauthorized('apiKeyToken is required'));
       }
 
       try {
@@ -153,7 +153,7 @@ function authApi(app) {
         const apiKey = await apiKeysService.getApiKey({ token: apiKeyToken });
 
         if (!apiKey) {
-          next(boom.unauthorized());
+          return next(boom.unauthorized());
         }
 
         const { _id: id, name, email } = queriedUser;
