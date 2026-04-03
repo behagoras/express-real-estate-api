@@ -3,10 +3,10 @@ const sinon = require('sinon');
 const { propertiesMock, filteredPropertiesMock } = require('./properties');
 
 const getAllStub = sinon.stub();
-getAllStub.withArgs('properties').resolves(propertiesMock);
+getAllStub.withArgs('property').resolves(propertiesMock);
 
 const tagQuery = { tags: { $in: ['Drama'] } };
-getAllStub.withArgs('properties', tagQuery).resolves(filteredPropertiesMock('Drama'));
+getAllStub.withArgs('property', tagQuery).resolves(filteredPropertiesMock('Drama'));
 
 const createStub = sinon.stub().resolves(propertiesMock[0].id);
 
